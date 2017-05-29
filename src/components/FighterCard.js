@@ -4,7 +4,7 @@ import { StyleSheet, View } from 'react-native'
 export default class FighterCard extends React.Component {
   render() {
     return (
-      <View style={styles.containerStyle}>
+      <View style={styles.container}>
         {this.props.children}
       </View>
     )
@@ -12,7 +12,7 @@ export default class FighterCard extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  containerStyle: {
+  container: {
     borderWidth: 1,
     borderRadius: 2,
     borderColor: '#ddd',

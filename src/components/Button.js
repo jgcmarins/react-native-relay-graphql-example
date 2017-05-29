@@ -4,17 +4,17 @@ import { StyleSheet, TouchableOpacity, Text } from 'react-native'
 export default class Button extends React.Component {
   render() {
     const { onPress, children } = this.props
-    const { buttonStyle, textStyle } = styles
+    const { container, label } = styles
     return (
-      <TouchableOpacity style={buttonStyle} onPress={onPress}>
-        <Text style={textStyle}>{children}</Text>
+      <TouchableOpacity style={container} onPress={onPress}>
+        <Text style={label}>{children}</Text>
       </TouchableOpacity>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  buttonStyle: {
+  container: {
     flex: 1,
     alignSelf: 'stretch',
     backgroundColor: '#fff',
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     marginRight: 5
   },
-  textStyle: {
+  label: {
     alignSelf: 'center',
     color: 'rgb(0, 122, 255)',
     fontSize: 16,

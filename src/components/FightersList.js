@@ -13,13 +13,13 @@ export default class FightersList extends React.Component {
     .then(res => res.json())
     .then(array => {
       var fighters = array.map(fighter => {
-        if(fighter['belt_thumbnail'] !== undefined) return fighter
+        return (fighter['belt_thumbnail'] !== undefined) ? fighter : null
       })
       fighters = fighters.filter(fighter => {
-        return fighter !== undefined
+        return fighter !== null
       })
       fighters = fighters.sort((A, B) => {
-        return B['wins'] - A['wins']
+        return (B['wins'] - A['wins'])
       })
       fighters = fighters.slice(0, 20)
       this.setState({ fighters })

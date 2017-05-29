@@ -10,10 +10,10 @@ export default class FighterDetail extends React.Component {
   onPressHandler = (url) => { Linking.openURL(url) }
 
   render() {
-    const { fighter } = this.props
     const {
       profile_image,
-      first_name, last_name,
+      first_name,
+      last_name,
       nickname,
       weight_class,
       wins,
@@ -21,13 +21,13 @@ export default class FighterDetail extends React.Component {
       draws,
       belt_thumbnail,
       link,
-    } = fighter
+    } = this.props.fighter
     const {
       thumbnailContainer,
       thumbnailStyle,
       textContainer,
       nameStyle,
-      statusContainer,
+      statsContainer,
       imageContainer,
       imageStyle,
     } = styles
@@ -42,7 +42,7 @@ export default class FighterDetail extends React.Component {
             <Text>{nickname}</Text>
             <Text>{weight_class}</Text>
           </View>
-          <View style={statusContainer}>
+          <View style={statsContainer}>
             <Text style={{ color: 'rgb(0, 122, 255)'}}>{'Wins: ' + wins}</Text>
             <Text style={{ color: 'rgb(255, 59, 48)'}}>{'Losses: ' + losses}</Text>
             <Text style={{ color: '#a9a9a9'}}>{'Draws: ' + draws}</Text>
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   nameStyle: {
     fontSize: 18,
   },
-  statusContainer: {
+  statsContainer: {
     flexDirection: 'column',
     justifyContent: 'space-around',
     marginLeft: 20,

@@ -8,7 +8,7 @@ export default class Fighters extends React.Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <Header header={'Top 20 UFC Fighters'} />
+        <Header label={'Top 20 UFC Fighters'} />
         <FightersList />
       </View>
     )

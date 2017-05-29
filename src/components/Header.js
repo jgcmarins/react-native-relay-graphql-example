@@ -3,17 +3,17 @@ import { StyleSheet, View, Text } from 'react-native'
 
 export default class Header extends React.Component {
   render() {
-    const { headerContainer, textStyle } = styles
+    const { label } = this.props
     return (
-      <View style={headerContainer}>
-        <Text style={textStyle}>{this.props.header}</Text>
+      <View style={styles.container}>
+        <Text style={styles.label}>{label}</Text>
       </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  headerContainer: {
+  container: {
     backgroundColor: '#F8F8F8',
     alignItems: 'center',
     justifyContent: 'center',
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     elevation: 4,
     position: 'relative',
   },
-  textStyle: {
+  label: {
     fontSize: 20,
     fontWeight: '600',
   },
