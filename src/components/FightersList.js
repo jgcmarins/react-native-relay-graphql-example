@@ -4,14 +4,11 @@ import { ScrollView, Text } from 'react-native'
 import FighterDetail from './FighterDetail'
 
 export default class FightersList extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
+  state = {
       fighters: [],
-    }
   }
 
-  componentWillMount() {
+  componentWillMount = () => {
     fetch('http://ufc-data-api.ufc.com/api/v3/iphone/fighters')
     .then(res => res.json())
     .then(array => {
@@ -22,14 +19,14 @@ export default class FightersList extends React.Component {
         return fighter !== undefined
       })
       fighters = fighters.sort((A, B) => {
-        return A['wins'] - B['wins']
+        return B['wins'] - A['wins']
       })
-      fighters = fighters.reverse().slice(0, 20)
+      fighters = fighters.slice(0, 20)
       this.setState({ fighters })
     })
   }
 
-  renderFighters() {
+  renderFighters = () => {
     return this.state.fighters.map((fighter) => {
       return <FighterDetail key={fighter.id} fighter={fighter}/>
     })
