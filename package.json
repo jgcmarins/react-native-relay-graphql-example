@@ -2,6 +2,11 @@
   "name": "rn-top-ufc-fighters",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Joao Marins",
+    "email": "jgcmarins@gmail.com",
+    "url": "https://github.com/jgcmarins"
+  },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "eslint": "^3.19.0",
