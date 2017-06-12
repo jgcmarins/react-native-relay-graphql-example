@@ -1,5 +1,7 @@
 {
   "expo": {
-    "sdkVersion": "17.0.0"
+    "sdkVersion": "17.0.0",
+    "privacy": "public",
+    "name": "Top UFC Fighters",
   }
 }
