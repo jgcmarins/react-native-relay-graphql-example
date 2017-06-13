@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": false,
   "devDependencies": {
-    "react-native-scripts": "0.0.31",
+    "babel-plugin-relay": "^1.0.1",
+    "babel-preset-react-native": "^1.9.2",
     "jest-expo": "~1.0.1",
-    "react-test-renderer": "16.0.0-alpha.6"
+    "react-native-scripts": "0.0.31",
+    "react-test-renderer": "16.0.0-alpha.6",
+    "relay-compiler": "^1.0.0"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
@@ -13,14 +16,19 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
+    "relay": "relay-compiler --src ./src --schema data/schema.graphql",
     "test": "node node_modules/jest/bin/jest.js --watch"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
+    "babel-preset-react-native-stage-0": "^1.0.1",
     "expo": "^17.0.0",
     "react": "16.0.0-alpha.6",
-    "react-native": "^0.44.0"
+    "react-native": "^0.44.0",
+    "react-native-tab-view": "^0.0.66",
+    "react-navigation": "^1.0.0-beta.11",
+    "react-relay": "^1.0.0"
   }
 }

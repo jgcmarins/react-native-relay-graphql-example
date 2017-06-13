@@ -1,20 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-      </View>
-    );
-  }
-}
+import FightersListNavigator from './src/navigators/FightersListNavigator';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const UFCFightersApp = StackNavigator(
+  {
+    FightersList: { screen: FightersListNavigator },
   },
-});
+  {
+    initialRouteName: 'FightersList',
+  },
+);
+
+export default () => <UFCFightersApp />;
