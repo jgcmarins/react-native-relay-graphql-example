@@ -1,5 +1,7 @@
 type Fighter {
-  id: Int
+  # The ID of an object
+  id: ID!
+  _id: Int
   profileImage: String
   firstName: String
   lastName: String

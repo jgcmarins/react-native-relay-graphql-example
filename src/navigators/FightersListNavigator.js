@@ -14,10 +14,10 @@ type Route = {
 type State = NavigationState<Route>;
 
 export default class FightersListNavigator extends PureComponent {
-  static navigationOptions = {
+  static navigationOptions = ({ navigation }) => ({
     title: 'Top 20 UFC Fighters',
     headerStyle: { height: 80, paddingTop: 25, },
-  };
+  });
 
   state: State = {
     index: 0,

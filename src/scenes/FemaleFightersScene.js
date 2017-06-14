@@ -4,13 +4,9 @@ import { StyleSheet, View, Text, ScrollView, } from 'react-native';
 export default class FemaleFightersScene extends PureComponent {
 
   _renderFighters = () => {
-    var fighters = [];
-    for(var i = 0 ; i < 10 ; i++) {
-      fighters.push(
-        <Text key={i}>{i}</Text>
-      );
-    }
-    return fighters;
+    return (
+      <Text>{'Coming soon...'}</Text>
+    );
   }
 
   render() {
