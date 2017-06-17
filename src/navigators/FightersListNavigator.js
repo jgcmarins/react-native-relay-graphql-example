@@ -3,8 +3,8 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { TabViewAnimated, TabBar, TabViewPagerPan } from 'react-native-tab-view';
 import type { NavigationState } from 'react-native-tab-view/types';
 
-import ActiveFightersScene from '../scenes/ActiveFightersScene';
-import RetiredFightersScene from '../scenes/RetiredFightersScene';
+import MaleFightersScene from '../scenes/MaleFightersScene';
+import FemaleFightersScene from '../scenes/FemaleFightersScene';
 
 type Route = {
   key: string,
@@ -53,11 +53,11 @@ export default class FightersListNavigator extends PureComponent {
     switch (route.key) {
       case '0':
         return (
-          <ActiveFightersScene/>
+          <MaleFightersScene/>
         );
       case '1':
         return (
-          <RetiredFightersScene />
+          <FemaleFightersScene />
         );
       default:
         return null;

@@ -9,13 +9,16 @@ import environment from '../createRelayEnvironment';
 
 var round = 1;
 
-export default class RetiredFightersScene extends PureComponent {
+export default class MaleFightersScene extends PureComponent {
 
   _renderFighters = (allFighters) => {
     var array = [];
     allFighters.map(fighter => {
-      if(fighter.nickname) array.push(<Text key={fighter._id}>{fighter.nickname}</Text>)
+      if(fighter.weightClass) {
+        if(fighter.weightClass.includes('Women')) array.push(<Text key={fighter._id}>{fighter.nickname}</Text>)
+      }
     });
+    console.log(array.length);
     return array;
   }
 
