@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import { StyleSheet, TouchableOpacity, Text } from 'react-native'
 
-export default class Button extends React.Component {
+export default class Button extends PureComponent {
   render() {
     const { onPress, children } = this.props
     const { container, label } = styles
@@ -15,8 +15,6 @@ export default class Button extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignSelf: 'stretch',
     backgroundColor: '#fff',
     borderRadius: 5,
     borderWidth: 1,

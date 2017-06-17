@@ -1,4 +1,7 @@
 {
+  "plugins": [
+    "relay"
+  ],
   "presets": ["babel-preset-expo"],
   "env": {
     "development": {
