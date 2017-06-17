@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { StyleSheet, View, Text, ScrollView, } from 'react-native';
 
-export default class FemaleFightersScene extends PureComponent {
+export default class RetiredFightersScene extends PureComponent {
 
   _renderFighters = () => {
     return (

@@ -9,7 +9,7 @@ import environment from '../createRelayEnvironment';
 
 var round = 1;
 
-export default class MaleFightersScene extends PureComponent {
+export default class RetiredFightersScene extends PureComponent {
 
   _renderFighters = (allFighters) => {
     var array = [];
@@ -52,7 +52,6 @@ export default class MaleFightersScene extends PureComponent {
               </View>
             );
           } else {
-            console.log('else')
             if(round === 1) {
               round = 2;
               return (<View style={{ flex: 1, backgroundColor: '#fff' }}><Text>{'First atempt...'}</Text></View>);
