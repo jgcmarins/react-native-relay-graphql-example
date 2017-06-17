@@ -23,10 +23,10 @@ import FightersListNavigator from './src/navigators/FightersListNavigator';
 
 const UFCFightersApp = StackNavigator(
   {
-    FightersList: { screen: FightersListNavigator },
+    FightersListNavigator: { screen: FightersListNavigator },
   },
   {
-    initialRouteName: 'FightersList',
+    initialRouteName: 'FightersListNavigator',
   },
 );
 

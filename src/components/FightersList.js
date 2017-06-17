@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import { StyleSheet, View, Text, ScrollView, } from 'react-native';
 
+import FightersListItem from './FightersListItem';
+
 export default class FightersList extends PureComponent {
 
   _renderFighters = (allFighters, gender) => {
@@ -20,7 +22,7 @@ export default class FightersList extends PureComponent {
     });
 
     var fightersList = fighters.map(fighter => {
-      return (<Text key={fighter._id}>{fighter.firstName + ' ' + fighter.lastName}</Text>);
+      return (<FightersListItem key={fighter._id} fighter={fighter} />);
     });
 
     return fightersList;
