@@ -3,8 +3,7 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { TabViewAnimated, TabBar, TabViewPagerPan } from 'react-native-tab-view';
 import type { NavigationState } from 'react-native-tab-view/types';
 
-import MaleFightersScene from '../scenes/MaleFightersScene';
-import FemaleFightersScene from '../scenes/FemaleFightersScene';
+import FightersScene from '../scenes/FightersScene';
 
 type Route = {
   key: string,
@@ -15,15 +14,15 @@ type State = NavigationState<Route>;
 
 export default class FightersListNavigator extends PureComponent {
   static navigationOptions = ({ navigation }) => ({
-    title: 'Top 20 UFC Fighters',
+    title: 'Top UFC Fighters',
     headerStyle: { height: 80, paddingTop: 25, },
   });
 
   state: State = {
     index: 0,
     routes: [
-      { key: '0', title: 'Active' },
-      { key: '1', title: 'Retired' },
+      { key: '0', title: 'Male' },
+      { key: '1', title: 'Female' },
     ],
   };
 
@@ -53,11 +52,11 @@ export default class FightersListNavigator extends PureComponent {
     switch (route.key) {
       case '0':
         return (
-          <MaleFightersScene/>
+          <FightersScene gender={'male'} />
         );
       case '1':
         return (
-          <FemaleFightersScene />
+          <FightersScene gender={'female'} />
         );
       default:
         return null;

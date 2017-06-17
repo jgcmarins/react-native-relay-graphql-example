@@ -6,21 +6,9 @@ import Relay, {
 } from 'react-relay';
 
 import environment from '../createRelayEnvironment';
+import FightersList from '../components/FightersList';
 
-var round = 1;
-
-export default class MaleFightersScene extends PureComponent {
-
-  _renderFighters = (allFighters) => {
-    var array = [];
-    allFighters.map(fighter => {
-      if(fighter.weightClass) {
-        if(fighter.weightClass.includes('Women')) array.push(<Text key={fighter._id}>{fighter.nickname}</Text>)
-      }
-    });
-    console.log(array.length);
-    return array;
-  }
+export default class FightersScene extends PureComponent {
 
   render() {
     return (
@@ -48,19 +36,10 @@ export default class MaleFightersScene extends PureComponent {
             return (<View style={{ flex: 1, backgroundColor: '#fff' }}><Text>{error.message}</Text></View>);
           } else if(props) {
             return (
-              <View style={{ flex: 1, backgroundColor: '#fff' }}>
-                <ScrollView>
-                  {this._renderFighters(props.allFighters)}
-                </ScrollView>
-              </View>
+              <FightersList allFighters={props.allFighters} gender={this.props.gender} />
             );
           } else {
-            if(round === 1) {
-              round = 2;
-              return (<View style={{ flex: 1, backgroundColor: '#fff' }}><Text>{'First atempt...'}</Text></View>);
-            } else {
-              return (<View style={{ flex: 1, backgroundColor: '#fff' }}><Text>{'Second atempt... and nothing.'}</Text></View>);
-            }
+            return (<View style={{ flex: 1, backgroundColor: '#fff' }}><Text>{'Loading...'}</Text></View>);
           }
         }}
       />
