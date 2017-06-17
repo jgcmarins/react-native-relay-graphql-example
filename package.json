@@ -23,6 +23,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@expo/vector-icons": "^5.0.0",
     "babel-preset-react-native-stage-0": "^1.0.1",
     "expo": "^17.0.0",
     "react": "16.0.0-alpha.6",

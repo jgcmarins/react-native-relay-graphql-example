@@ -21,8 +21,8 @@ export default class FightersListNavigator extends PureComponent {
   state: State = {
     index: 0,
     routes: [
-      { key: '0', title: 'Male' },
-      { key: '1', title: 'Female' },
+      { key: '0', title: 'Female' },
+      { key: '1', title: 'Male' },
     ],
   };
 
@@ -52,11 +52,11 @@ export default class FightersListNavigator extends PureComponent {
     switch (route.key) {
       case '0':
         return (
-          <FightersScene gender={'male'} />
+          <FightersScene navigation={this.props.navigation} gender={'female'} />
         );
       case '1':
         return (
-          <FightersScene gender={'female'} />
+          <FightersScene navigation={this.props.navigation} gender={'male'} />
         );
       default:
         return null;

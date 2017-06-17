@@ -2,6 +2,7 @@ import React from 'react';
 import { StackNavigator } from 'react-navigation';
 
 import FightersListNavigator from './src/navigators/FightersListNavigator';
+import FighterDetailNavigator from './src/navigators/FighterDetailNavigator';
 
 // Fix for Android - It wasn't fetching the data properly when NOT in debug mode
 // https://github.com/facebook/relay/issues/1704
@@ -24,6 +25,7 @@ import FightersListNavigator from './src/navigators/FightersListNavigator';
 const UFCFightersApp = StackNavigator(
   {
     FightersListNavigator: { screen: FightersListNavigator },
+    FighterDetailNavigator: { screen: FighterDetailNavigator },
   },
   {
     initialRouteName: 'FightersListNavigator',

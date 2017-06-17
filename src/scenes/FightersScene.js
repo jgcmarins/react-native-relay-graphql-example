@@ -36,7 +36,11 @@ export default class FightersScene extends PureComponent {
             return (<View style={{ flex: 1, backgroundColor: '#fff' }}><Text>{error.message}</Text></View>);
           } else if(props) {
             return (
-              <FightersList allFighters={props.allFighters} gender={this.props.gender} />
+              <FightersList
+                navigation={this.props.navigation}
+                allFighters={props.allFighters}
+                gender={this.props.gender}
+              />
             );
           } else {
             return (<View style={{ flex: 1, backgroundColor: '#fff' }}><Text>{'Loading...'}</Text></View>);

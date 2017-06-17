@@ -22,7 +22,13 @@ export default class FightersList extends PureComponent {
     });
 
     var fightersList = fighters.map(fighter => {
-      return (<FightersListItem key={fighter._id} fighter={fighter} />);
+      return (
+        <FightersListItem
+          key={fighter._id}
+          fighter={fighter}
+          navigation={this.props.navigation}
+        />
+      );
     });
 
     return fightersList;
