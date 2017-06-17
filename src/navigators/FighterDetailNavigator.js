@@ -36,12 +36,13 @@ export default class FighterDetailNavigator extends PureComponent {
         <View style={{ alignItems: 'center', marginTop: 10, marginBottom: 10 }}>
           {nickname ? <Text style={{ fontSize: 24 }}>{'\"' + nickname + '\"'}</Text> : null}
           <Image style={{ width: 300, height: 300 }} source={{ uri: beltThumbnail }} />
+          <Text>{'Weight class: ' + weightClass}</Text>
         </View>
         <View style={{
           flexDirection:
           'row',
           justifyContent: 'space-between',
-          margin: 20,
+          margin: 10,
         }}>
           <Text style={{ color: 'blue', fontSize: 16, }}>{'Wins: ' + wins}</Text>
           <Text style={{ color: 'red', fontSize: 16, }}>{'Losses: ' + losses}</Text>

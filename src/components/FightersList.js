@@ -18,7 +18,11 @@ export default class FightersList extends PureComponent {
     });
 
     fighters = fighters.sort((A, B) => {
-      return (B.wins - A.wins)
+      var totalA = (A.wins + A.losses + A.draws);
+      var rateA = Math.round((A.wins/totalA) * 100);
+      var totalB = (B.wins + B.losses + B.draws);
+      var rateB = Math.round((B.wins/totalB) * 100);
+      return (rateB - rateA);
     });
 
     var fightersList = fighters.map(fighter => {
