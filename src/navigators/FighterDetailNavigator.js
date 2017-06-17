@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
-import { StyleSheet, View, Text, Image } from 'react-native';
+import { StyleSheet, View, Text, Image, Linking } from 'react-native';
 
+import Button from '../components/common/Button';
 
 export default class FighterDetailNavigator extends PureComponent {
 
@@ -8,6 +9,8 @@ export default class FighterDetailNavigator extends PureComponent {
     title: navigation.state.params.fighter.firstName + ' ' + navigation.state.params.fighter.lastName,
     headerStyle: { height: 80, paddingTop: 25, },
   });
+
+  _onPressHandler = (url) => { Linking.openURL(url) }
 
   render() {
     const {
@@ -27,6 +30,7 @@ export default class FighterDetailNavigator extends PureComponent {
       <View style={{
         backgroundColor: '#fff',
         flexDirection: 'column',
+        justifyContent: 'space-between',
         padding: 5,
       }}>
         <View style={{ alignItems: 'center', marginTop: 10, marginBottom: 10 }}>
@@ -39,9 +43,12 @@ export default class FighterDetailNavigator extends PureComponent {
           justifyContent: 'space-between',
           margin: 20,
         }}>
-          <Text style={{ color: 'blue' }}>{'Wins: ' + wins}</Text>
-          <Text style={{ color: 'red' }}>{'Losses: ' + losses}</Text>
-          <Text style={{ color: 'grey' }}>{'Draws: ' + draws}</Text>
+          <Text style={{ color: 'blue', fontSize: 16, }}>{'Wins: ' + wins}</Text>
+          <Text style={{ color: 'red', fontSize: 16, }}>{'Losses: ' + losses}</Text>
+          <Text style={{ color: 'grey', fontSize: 16, }}>{'Draws: ' + draws}</Text>
+        </View>
+        <View style={{ marginTop: 10, marginBottom: 100 }}>
+          <Button onPress={() => this._onPressHandler(link)}>{'Full description'}</Button>
         </View>
       </View>
     );
