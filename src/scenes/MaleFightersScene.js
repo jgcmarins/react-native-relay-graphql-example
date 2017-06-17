@@ -7,6 +7,8 @@ import Relay, {
 
 import environment from '../createRelayEnvironment';
 
+var round = 1;
+
 export default class MaleFightersScene extends PureComponent {
 
   _renderFighters = (allFighters) => {
@@ -40,7 +42,7 @@ export default class MaleFightersScene extends PureComponent {
         `}
         render={({error, props}) => {
           if(error) {
-            return (<View><Text>{error.message}</Text></View>);
+            return (<View style={{ flex: 1, backgroundColor: '#fff' }}><Text>{error.message}</Text></View>);
           } else if(props) {
             return (
               <View style={{ flex: 1, backgroundColor: '#fff' }}>
@@ -50,7 +52,13 @@ export default class MaleFightersScene extends PureComponent {
               </View>
             );
           } else {
-            return (<View><Text>Loading...</Text></View>);
+            console.log('else')
+            if(round === 1) {
+              round = 2;
+              return (<View style={{ flex: 1, backgroundColor: '#fff' }}><Text>{'First atempt...'}</Text></View>);
+            } else {
+              return (<View style={{ flex: 1, backgroundColor: '#fff' }}><Text>{'Second atempt... and nothing.'}</Text></View>);
+            }
           }
         }}
       />

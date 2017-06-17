@@ -23,6 +23,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
     "babel-preset-react-native-stage-0": "^1.0.1",
     "expo": "^17.0.0",
     "react": "16.0.0-alpha.6",

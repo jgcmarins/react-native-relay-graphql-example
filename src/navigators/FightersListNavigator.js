@@ -22,8 +22,8 @@ export default class FightersListNavigator extends PureComponent {
   state: State = {
     index: 0,
     routes: [
-      { key: '0', title: 'Male' },
-      { key: '1', title: 'Female' },
+      { key: '0', title: 'Active' },
+      { key: '1', title: 'Retired' },
     ],
   };
 
