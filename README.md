@@ -1,6 +1,6 @@
-# rn-top-ufc-fighters
+# react-native-relay-graphql-example
 
-React Native + Relay + GraphQL: an app to display information about top UFC fighters.
+React Native + Relay Modern + GraphQL: an app to display information about top UFC fighters.
 
 The data is fetched by Relay Modern from this GraphQL Server: [https://graphql-ufc-api.now.sh/](https://graphql-ufc-api.now.sh/)
 
@@ -32,4 +32,4 @@ $ npm start
 This app was built on top of [CRNA](https://github.com/react-community/create-react-native-app).
 
 ## LICENSE
-[MIT](https://github.com/jgcmarins/rn-top-ufc-fighters/blob/master/LICENSE)
+[MIT](https://github.com/jgcmarins/react-native-relay-graphql-example/blob/master/LICENSE)
