@@ -1,4 +1,4 @@
-import { Environment, Network, RecordSource, Store } from 'relay-runtime'
+import { Environment, Network, RecordSource, Store } from 'relay-runtime';
 
 const fetchQuery = async (operation, variables, cacheConfig, uploadables) => {
   const response = await fetch('https://graphql-ufc-api.now.sh/', {
@@ -15,14 +15,14 @@ const fetchQuery = async (operation, variables, cacheConfig, uploadables) => {
   return await response.json();
 }
 
-const network = Network.create(fetchQuery)
+const network = Network.create(fetchQuery);
 
-const source = new RecordSource()
-const store = new Store(source)
+const source = new RecordSource();
+const store = new Store(source);
 
 const env = new Environment({
   network,
-  store
-})
+  store,
+});
 
-export default env
+export default env;

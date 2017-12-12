@@ -5,17 +5,18 @@ import Relay, {
   QueryRenderer,
 } from 'react-relay';
 
-import environment from '../createRelayEnvironment';
+import environment from '../environment';
 import FightersList from '../components/FightersList';
 
 export default class FightersScene extends PureComponent {
 
   render() {
+
     return (
       <QueryRenderer
         environment={ environment }
         query={ graphql`
-          query MaleFightersSceneQuery {
+          query FightersSceneQuery {
             allFighters {
               _id
               profileImage
