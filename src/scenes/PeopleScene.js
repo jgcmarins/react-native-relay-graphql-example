@@ -22,9 +22,11 @@ export default class PeopleScene extends PureComponent {
               height
               mass
               gender
-              homeworld {
-                  name
-              }
+              hairColor
+              birthYear
+              homeworld
+              species
+              films
             }
           }
         `}

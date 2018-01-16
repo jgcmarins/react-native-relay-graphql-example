@@ -1,15 +1,13 @@
-type Homeworld {
-  name: String
-}
-
 type Person {
   name: String
-  hair_color: String
+  hairColor: String
   birthYear: String
   gender: String
   mass: Int
   height: Int
-  homeworld: Homeworld
+  homeworld: String
+  films: [String]
+  species: String
 }
 
 type Query {

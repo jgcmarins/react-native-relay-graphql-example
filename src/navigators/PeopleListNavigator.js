@@ -22,7 +22,7 @@ export default class PeopleListNavigator extends PureComponent {
     index: 0,
     routes: [
       { key: '0', title: 'Organic' },
-      { key: '1', title: 'Robot' },
+      { key: '1', title: 'Droid' },
     ],
   };
 
@@ -56,7 +56,7 @@ export default class PeopleListNavigator extends PureComponent {
         );
       case '1':
         return (
-          <PeopleScene navigation={this.props.navigation} race={'Robot'} />
+          <PeopleScene navigation={this.props.navigation} race={'Droid'} />
         );
       default:
         return null;
@@ -73,7 +73,6 @@ export default class PeopleListNavigator extends PureComponent {
 
   render() {
     return (
-    <View style={{ flex: 1, backgroundColor: '#fff' }}>
       <TabViewAnimated
         style={{ flex: 1 }}
         navigationState={this.state}
@@ -82,10 +81,6 @@ export default class PeopleListNavigator extends PureComponent {
         onRequestChangeTab={this._handleChangeTab}
         renderPager={this._renderPager}
       />
-      <View style={{ marginTop: 10, marginBottom: 10 }}>
-          <Button onPress={() => {}} title="Load More"></Button>
-        </View>
-        </View>
     );
   }
 }

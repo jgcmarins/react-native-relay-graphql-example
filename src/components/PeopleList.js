@@ -8,20 +8,21 @@ export default class PeopleList extends PureComponent {
     _renderPeople = (allPeople, race) => {
     var people = new Array();
     allPeople.map(person => {
-        if (race == "Robot" && person.gender == 'n/a') {
+        if (person.mass < 0 || person.height < 0) {
+          return;
+        }
+        if (race == "Droid" && person.species == "Droid") {
             people.push(person)
-        } else if (race != 'Robot' && person.gender != 'n/a') {
+        } else if (race != 'Droid' && person.species != "Droid") {
             people.push(person)
         }
     });
 
-    // fighters = fighters.sort((A, B) => {
-    //   var totalA = (A.wins + A.losses + A.draws);
-    //   var rateA = Math.round((A.wins/totalA) * 100);
-    //   var totalB = (B.wins + B.losses + B.draws);
-    //   var rateB = Math.round((B.wins/totalB) * 100);
-    //   return (rateB - rateA);
-    // });
+    people = people.sort((A, B) => {
+      var bmiA = A.mass / (A.height*A.height);
+      var bmiB = B.mass / (B.height*B.height);
+      return bmiB - bmiA;
+    })
 
     var peopleList = people.map(person => {
       return (

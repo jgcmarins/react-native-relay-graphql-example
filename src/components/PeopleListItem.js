@@ -3,13 +3,9 @@ import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 
 export default class PeopleListItem extends PureComponent {
 
-  _calculateWinRate = (wins, losses, draws) => {
-    var total = wins + losses + draws;
-    return Math.round(((wins/total) * 100));
-  }
-
-  _calculateIMC = (height, mass) => {
-      return mass / (height*height);
+  _calculateBMI = (height, mass) => {
+    const bmi = mass / (height*height)*10000; 
+    return bmi.toFixed(2)
   }
 
   render() {
@@ -24,19 +20,16 @@ export default class PeopleListItem extends PureComponent {
         borderBottomWidth: 1,
         borderColor: '#ddd',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        justifyContent: 'space-between'
       }}>
-        <View style={{ flexDirection: 'row' }}>
+      <View style={{ flexDirection: 'column' }}>
         <Text style={{ fontSize: 18 }}>{person.name} </Text>
-          {/* <Image style={{ width: 60, height: 60, marginRight: 10 }} source={{ uri: fighter.profileImage }} />
-          <View style={{ flexDirection: 'column' }}>
-            <Text style={{ fontSize: 18 }}>{fighter.firstName + ' ' + fighter.lastName}</Text>
-            <Text style={{ fontSize: 16, color: 'grey' }}>{fighter.nickname}</Text>
-          </View> */}
-        </View>
-        {/* <View style={{ marginRight: 5 }}>
-          <Text>{'Win rate: ' + this._calculateWinRate(wins, losses, draws) + '%'}</Text>
-        </View> */}
+        <Text style={{ fontSize: 18 }}>{'Species: ' + person.species}</Text>
+        <Text style={{ fontSize: 16, color: 'grey' }}>{'Homeworld: ' + person.homeworld}</Text>
+      </View>
+      <View style={{ marginRight: 5 }}>
+        <Text>{'BMI: ' + this._calculateBMI(height, mass)}</Text>
+      </View>
       </View>
       </TouchableOpacity>
     );
