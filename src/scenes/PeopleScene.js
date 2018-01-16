@@ -6,9 +6,9 @@ import Relay, {
 } from 'react-relay';
 
 import environment from '../environment';
-import FightersList from '../components/FightersList';
+import PeopleList from '../components/PeopleList';
 
-export default class FightersScene extends PureComponent {
+export default class PeopleScene extends PureComponent {
 
   render() {
 
@@ -16,19 +16,15 @@ export default class FightersScene extends PureComponent {
       <QueryRenderer
         environment={ environment }
         query={ graphql`
-          query FightersSceneQuery {
-            allFighters {
-              _id
-              profileImage
-              firstName
-              lastName
-              nickname
-              weightClass
-              wins
-              losses
-              draws
-              beltThumbnail
-              link
+          query PeopleSceneQuery {
+            allPeople {
+              name
+              height
+              mass
+              gender
+              homeworld {
+                  name
+              }
             }
           }
         `}
@@ -37,10 +33,10 @@ export default class FightersScene extends PureComponent {
             return (<View style={{ flex: 1, backgroundColor: '#fff' }}><Text>{error.message}</Text></View>);
           } else if(props) {
             return (
-              <FightersList
+              <PeopleList
                 navigation={this.props.navigation}
-                allFighters={props.allFighters}
-                gender={this.props.gender}
+                allPeople={props.allPeople}
+                race={this.props.race}
               />
             );
           } else {

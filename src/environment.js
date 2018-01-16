@@ -1,7 +1,7 @@
 import { Environment, Network, RecordSource, Store } from 'relay-runtime';
 
 const fetchQuery = async (operation, variables, cacheConfig, uploadables) => {
-  const response = await fetch('https://graphql-ufc-api.now.sh/', {
+  const response = await fetch('http://192.168.0.105:5000/', {
     method: 'POST',
     headers: {
       Accept: 'application/json',

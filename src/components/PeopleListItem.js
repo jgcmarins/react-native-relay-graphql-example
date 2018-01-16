@@ -1,19 +1,23 @@
 import React, { PureComponent } from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 
-export default class FightersListItem extends PureComponent {
+export default class PeopleListItem extends PureComponent {
 
   _calculateWinRate = (wins, losses, draws) => {
     var total = wins + losses + draws;
     return Math.round(((wins/total) * 100));
   }
 
+  _calculateIMC = (height, mass) => {
+      return mass / (height*height);
+  }
+
   render() {
-    const { fighter } = this.props;
+    const { person } = this.props;
     const { navigate } = this.props.navigation
-    const { wins, losses, draws } = fighter;
+    const { height, mass } = person;
     return (
-      <TouchableOpacity onPress={() => navigate('FighterDetailNavigator', {fighter})}>
+      <TouchableOpacity onPress={() => navigate('PersonDetailNavigator', {person})}>
       <View style={{
         flexDirection: 'row',
         padding: 5,
@@ -23,15 +27,16 @@ export default class FightersListItem extends PureComponent {
         justifyContent: 'space-between',
       }}>
         <View style={{ flexDirection: 'row' }}>
-          <Image style={{ width: 60, height: 60, marginRight: 10 }} source={{ uri: fighter.profileImage }} />
+        <Text style={{ fontSize: 18 }}>{person.name} </Text>
+          {/* <Image style={{ width: 60, height: 60, marginRight: 10 }} source={{ uri: fighter.profileImage }} />
           <View style={{ flexDirection: 'column' }}>
             <Text style={{ fontSize: 18 }}>{fighter.firstName + ' ' + fighter.lastName}</Text>
             <Text style={{ fontSize: 16, color: 'grey' }}>{fighter.nickname}</Text>
-          </View>
+          </View> */}
         </View>
-        <View style={{ marginRight: 5 }}>
+        {/* <View style={{ marginRight: 5 }}>
           <Text>{'Win rate: ' + this._calculateWinRate(wins, losses, draws) + '%'}</Text>
-        </View>
+        </View> */}
       </View>
       </TouchableOpacity>
     );

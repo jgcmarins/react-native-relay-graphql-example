@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, Button } from 'react-native';
 import { TabViewAnimated, TabBar, TabViewPagerPan } from 'react-native-tab-view';
 import type { NavigationState } from 'react-native-tab-view/types';
 
-import FightersScene from '../scenes/FightersScene';
+import PeopleScene from '../scenes/PeopleScene';
 
 type Route = {
   key: string,
@@ -12,17 +12,17 @@ type Route = {
 
 type State = NavigationState<Route>;
 
-export default class FightersListNavigator extends PureComponent {
+export default class PeopleListNavigator extends PureComponent {
   static navigationOptions = ({ navigation }) => ({
-    title: 'Top UFC Fighters',
+    title: 'Star Wars Characters',
     headerStyle: { height: 80, paddingTop: 25, },
   });
 
   state: State = {
     index: 0,
     routes: [
-      { key: '0', title: 'Female' },
-      { key: '1', title: 'Male' },
+      { key: '0', title: 'Organic' },
+      { key: '1', title: 'Robot' },
     ],
   };
 
@@ -52,11 +52,11 @@ export default class FightersListNavigator extends PureComponent {
     switch (route.key) {
       case '0':
         return (
-          <FightersScene navigation={this.props.navigation} gender={'female'} />
+          <PeopleScene navigation={this.props.navigation} race={'Organic'} />
         );
       case '1':
         return (
-          <FightersScene navigation={this.props.navigation} gender={'male'} />
+          <PeopleScene navigation={this.props.navigation} race={'Robot'} />
         );
       default:
         return null;
@@ -73,6 +73,7 @@ export default class FightersListNavigator extends PureComponent {
 
   render() {
     return (
+    <View style={{ flex: 1, backgroundColor: '#fff' }}>
       <TabViewAnimated
         style={{ flex: 1 }}
         navigationState={this.state}
@@ -81,6 +82,10 @@ export default class FightersListNavigator extends PureComponent {
         onRequestChangeTab={this._handleChangeTab}
         renderPager={this._renderPager}
       />
+      <View style={{ marginTop: 10, marginBottom: 10 }}>
+          <Button onPress={() => {}} title="Load More"></Button>
+        </View>
+        </View>
     );
   }
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import { StackNavigator } from 'react-navigation';
 
-import FightersListNavigator from './src/navigators/FightersListNavigator';
-import FighterDetailNavigator from './src/navigators/FighterDetailNavigator';
+import PeopleListNavigator from './src/navigators/PeopleListNavigator';
+import PersonDetailNavigator from './src/navigators/PersonDetailNavigator';
 
 // Fix for Android - It wasn't fetching the data properly when NOT in debug mode
 // https://github.com/facebook/relay/issues/1704
@@ -22,14 +22,14 @@ import FighterDetailNavigator from './src/navigators/FighterDetailNavigator';
   }
 })(require('babel-runtime/core-js/set').default);
 
-const UFCFightersApp = StackNavigator(
+const SWCharactersApp = StackNavigator(
   {
-    FightersListNavigator: { screen: FightersListNavigator },
-    FighterDetailNavigator: { screen: FighterDetailNavigator },
+    PeopleListNavigator: { screen: PeopleListNavigator },
+    PersonDetailNavigator: { screen: PersonDetailNavigator },
   },
   {
-    initialRouteName: 'FightersListNavigator',
+    initialRouteName: 'PeopleListNavigator',
   },
 );
 
-export default () => <UFCFightersApp />;
+export default () => <SWCharactersApp />;
