@@ -1,86 +1,84 @@
 import React, { PureComponent } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Button } from 'react-native';
-import { TabViewAnimated, TabBar, TabViewPagerPan } from 'react-native-tab-view';
-import type { NavigationState } from 'react-native-tab-view/types';
 
-import PeopleScene from '../scenes/PeopleScene';
+import PeopleList from '../components/PeopleList';
 
-type Route = {
-  key: string,
-  title: string,
-};
+import { request } from 'graphql-request'
 
-type State = NavigationState<Route>;
+const urlGraphServer = 'https://graphql-sw-api-gxmdjgcfhi.now.sh';
 
 export default class PeopleListNavigator extends PureComponent {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      dataSource: [],
+      page: 1,
+      isFetching: false
+    };
+    this._fetchData(1)
+  }
+
   static navigationOptions = ({ navigation }) => ({
     title: 'Star Wars Characters',
     headerStyle: { height: 80, paddingTop: 25, },
   });
 
-  state: State = {
-    index: 0,
-    routes: [
-      { key: '0', title: 'Organic' },
-      { key: '1', title: 'Droid' },
-    ],
-  };
-
-  _renderTabHeader = props => {
-    return (
-      <TabBar
-        {...props}
-        style={{
-          backgroundColor: '#fff',
-          paddingTop: 10,
-          paddingBottom: 10,
-          justifyContent: 'center',
-        }}
-        tabStyle={{ height: 25 }}
-        indicatorStyle={{
-          borderWidth: 1,
-          borderColor: '#000',
-        }}
-        renderLabel={({ route }) =>
-            <Text>{route.title.toUpperCase()}</Text>
-        }
-      />
-    );
-  };
-
-  _renderScene = ({ route }) => {
-    switch (route.key) {
-      case '0':
-        return (
-          <PeopleScene navigation={this.props.navigation} race={'Organic'} />
-        );
-      case '1':
-        return (
-          <PeopleScene navigation={this.props.navigation} race={'Droid'} />
-        );
-      default:
-        return null;
+  _fetchData = (page) => {
+    //skip if already fetching or page greater than 9
+    //should never happen!
+    if (page > 9 || this.state.isFetching == true) {
+      return;
     }
-  };
-
-  _handleChangeTab = index => {
-    this.setState({
-      index,
-    });
-  };
-
-  _renderPager = props => <TabViewPagerPan {...props} />;
+    //do not set state if page is 1
+    if (page>1) {
+      this.setState(previousState => {
+        return {...previousState, isFetching:true}
+      })
+    }
+    const query = `
+    {
+      peoplePage(page:`+page+`) {
+        name
+        height
+        mass
+        hairColor
+        birthYear
+        species
+        homeworld
+        films
+        gender
+      }
+    }`
+    request(urlGraphServer, query).then(data => {
+      this.setState(previousState => {
+        return {dataSource:[...previousState.dataSource, ...data.peoplePage], page:previousState.page+1, isFetching: false };
+       });
+    }).catch(error => {
+      console.log("error")
+      console.log(error)
+    })
+  }
 
   render() {
-    return (
-      <TabViewAnimated
-        style={{ flex: 1 }}
-        navigationState={this.state}
-        renderHeader={this._renderTabHeader}
-        renderScene={this._renderScene}
-        onRequestChangeTab={this._handleChangeTab}
-        renderPager={this._renderPager}
-      />
-    );
+    if (this.state.dataSource.length == 0) {
+      return (
+        <View style={{alignItems: 'center'}}>
+        <Text style={{fontSize:24}}> {"Loading..."}</Text>
+      </View>)
+    } else {
+      return (
+        <View style={{flex:1}}>
+          <PeopleList
+            navigation={this.props.navigation}
+            allPeople={this.state.dataSource}
+            isRefreshing={this.state.isFetching}
+          /> 
+          {this.state.isFetching ? <Button onPress={() => {}} title="Loading..."/> : this.state.page < 10 ? <View style={{ marginTop: 10, marginBottom: 10 }}>
+              <Button onPress={() => this._fetchData(this.state.page)} title="Load More"/>
+          </View>: null}
+        </View>
+      );
+    }
   }
 }

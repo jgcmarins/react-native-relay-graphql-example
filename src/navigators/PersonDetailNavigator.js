@@ -1,7 +1,5 @@
 import React, { PureComponent } from 'react';
-import { StyleSheet, View, Text, Image, Linking } from 'react-native';
-
-import Button from '../components/common/Button';
+import { StyleSheet, View, Text, Image, } from 'react-native';
 
 export default class PersonDetailNavigator extends PureComponent {
 
@@ -63,7 +61,7 @@ export default class PersonDetailNavigator extends PureComponent {
       species,
       homeworld
     } = this.props.navigation.state.params.person;
-
+    const healthStatus = this._characterWeightStatus(this._calculateBMI(height, mass), height);
     return (
       <View style={{
         backgroundColor: '#fff',
@@ -96,10 +94,10 @@ export default class PersonDetailNavigator extends PureComponent {
           <View style={{alignItems: 'center', marginTop: 10}}>
           <Image
             style={{width: 200, height: 200}}
-            source={{uri: this._imageForStatus(this._characterWeightStatus(this._calculateBMI(height, mass), height))}}/>
+            source={{uri: this._imageForStatus(healthStatus)}}/>
           </View>
           <View style={{alignItems: 'center', marginTop: 10}}>
-            <Text style={{ fontSize: 22 }}>{'Status: '+ this._characterWeightStatus(this._calculateBMI(height, mass), height)}</Text>
+            <Text style={{ fontSize: 22 }}>{'Status: '+ healthStatus}</Text>
           </View>
         </View>
       </View>
