@@ -27,7 +27,7 @@
     "expo": "^17.0.0",
     "react": "16.0.0-alpha.6",
     "react-native": "^0.44.0",
-    "react-native-tab-view": "^0.0.66",
+    "react-native-tab-view": "^1.4.1",
     "react-navigation": "^4.0.5",
     "react-relay": "^1.0.0"
   }
