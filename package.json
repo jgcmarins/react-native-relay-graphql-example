@@ -6,7 +6,7 @@
     "babel-plugin-relay": "^1.5.0",
     "babel-preset-react-native": "^4.0.1",
     "jest-expo": "~34.0.1",
-    "react-native-scripts": "0.0.31",
+    "react-native-scripts": "2.0.1",
     "react-test-renderer": "16.0.0-alpha.6",
     "relay-compiler": "^1.0.0"
   },
