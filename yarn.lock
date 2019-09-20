@@ -6920,9 +6920,9 @@ react-native@^0.44.0:
     xpipe "^1.0.5"
     yargs "^6.4.0"
 
-react-navigation@^4.0.5:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-4.0.5.tgz#d4e16d9884cfd6bb2cda4d16e001227e2c859b46"
+react-navigation@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-4.0.6.tgz#6e0c4324c8eb314f31b510a43cbf7cea9410f246"
   dependencies:
     "@react-navigation/core" "^3.5.1"
     "@react-navigation/native" "^3.6.2"
