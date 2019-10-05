@@ -25,7 +25,7 @@
   "dependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
     "expo": "^35.0.0",
-    "react": "16.10.1",
+    "react": "16.10.2",
     "react-native": "^0.55.0",
     "react-native-tab-view": "^1.4.1",
     "react-navigation": "^4.0.10",
