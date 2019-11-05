@@ -1915,9 +1915,9 @@ babel-preset-es2015-node@^6.1.1:
     babel-plugin-transform-es2015-unicode-regex "6.x"
     semver "5.x"
 
-babel-preset-expo@~7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/babel-preset-expo/-/babel-preset-expo-7.0.0.tgz#1d288e0efb17dcea84b0d30ce5f5ab99f781ae4a"
+babel-preset-expo@~7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/babel-preset-expo/-/babel-preset-expo-7.1.0.tgz#d53ee28fa88c207ba12575f5c3f7753bcb01994e"
   dependencies:
     "@babel/core" "^7.1.0"
     "@babel/plugin-proposal-decorators" "^7.1.0"
@@ -2992,13 +2992,13 @@ expo-sqlite@~7.0.0:
     "@types/websql" "^0.0.27"
     lodash "^4.17.15"
 
-expo-web-browser@~7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/expo-web-browser/-/expo-web-browser-7.0.0.tgz#97d72fe8389079c8da4208eaedfe85247b5bd704"
+expo-web-browser@~7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/expo-web-browser/-/expo-web-browser-7.0.1.tgz#b64ef895b5c0604f312b64b085f7a2f1da630e20"
 
-expo@^35.0.0:
-  version "35.0.0"
-  resolved "https://registry.yarnpkg.com/expo/-/expo-35.0.0.tgz#79649c9dbcc8bd2066d50642b30eebb55907ee4e"
+expo@^35.0.1:
+  version "35.0.1"
+  resolved "https://registry.yarnpkg.com/expo/-/expo-35.0.1.tgz#a7897e8b8ff57a114c68fc946b85a702522c315f"
   dependencies:
     "@babel/runtime" "^7.1.2"
     "@expo/vector-icons" "^10.0.2"
@@ -3009,7 +3009,7 @@ expo@^35.0.0:
     "@types/uuid-js" "^0.7.1"
     "@unimodules/core" "~4.0.0"
     "@unimodules/react-native-adapter" "~4.0.0"
-    babel-preset-expo "~7.0.0"
+    babel-preset-expo "~7.1.0"
     cross-spawn "^6.0.5"
     expo-app-loader-provider "~7.0.0"
     expo-asset "~7.0.0"
@@ -3021,7 +3021,7 @@ expo@^35.0.0:
     expo-location "~7.0.0"
     expo-permissions "~7.0.0"
     expo-sqlite "~7.0.0"
-    expo-web-browser "~7.0.0"
+    expo-web-browser "~7.0.1"
     fbemitter "^2.1.1"
     invariant "^2.2.2"
     lodash "^4.6.0"
