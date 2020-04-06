@@ -1414,10 +1414,6 @@
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
 
-"@types/uuid-js@^0.7.1":
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/@types/uuid-js/-/uuid-js-0.7.2.tgz#5b5552fcbaaf4acf026fb6dc66f7e5bd6b4be92f"
-
 "@types/websql@^0.0.27":
   version "0.0.27"
   resolved "https://registry.yarnpkg.com/@types/websql/-/websql-0.0.27.tgz#621a666a7f02018e7cbb4abab956a25736c27d71"
@@ -1432,15 +1428,15 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@unimodules/core@~5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@unimodules/core/-/core-5.0.0.tgz#e1e3ca3f91f3d27dbc93c6eebc03a40c711da755"
+"@unimodules/core@~5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@unimodules/core/-/core-5.1.0.tgz#eae3706e1ecc99d4b992ad39970c43d92418d394"
   dependencies:
     compare-versions "^3.4.0"
 
-"@unimodules/react-native-adapter@~5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@unimodules/react-native-adapter/-/react-native-adapter-5.0.0.tgz#af9835821a2bf38390b9f09f3231c0b7546ee510"
+"@unimodules/react-native-adapter@~5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@unimodules/react-native-adapter/-/react-native-adapter-5.2.0.tgz#96bfd4cfbad5083b3aa1152ee0a4ac84fa9dfb69"
   dependencies:
     invariant "^2.2.4"
     lodash "^4.5.0"
@@ -2258,9 +2254,9 @@ babel-preset-es2015-node@^6.1.1:
     babel-plugin-transform-es2015-unicode-regex "6.x"
     semver "5.x"
 
-babel-preset-expo@~8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/babel-preset-expo/-/babel-preset-expo-8.0.0.tgz#08c042363189f2d871381f0d0dbf9644e9f67aea"
+babel-preset-expo@~8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/babel-preset-expo/-/babel-preset-expo-8.1.0.tgz#7dfdebe6dad80edd1901e0f733ca6a6cce2ad605"
   dependencies:
     "@babel/plugin-proposal-decorators" "^7.6.0"
     "@babel/preset-env" "^7.6.3"
@@ -2484,6 +2480,10 @@ babylon@^6.18.0:
 babylon@^7.0.0-beta:
   version "7.0.0-beta.47"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-7.0.0-beta.47.tgz#6d1fa44f0abec41ab7c780481e62fd9aafbdea80"
+
+badgin@^1.1.2:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/badgin/-/badgin-1.1.4.tgz#5a8e2b81e812d3c4af7bacc2e62b36a9a5e40de5"
 
 balanced-match@^1.0.0:
   version "1.0.0"
@@ -3293,73 +3293,69 @@ expect@^24.9.0:
     jest-message-util "^24.9.0"
     jest-regex-util "^24.9.0"
 
-expo-app-loader-provider@~8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/expo-app-loader-provider/-/expo-app-loader-provider-8.0.0.tgz#c18ef20a24153f5a0dbb297106ef0bcb5de57180"
-
-expo-asset@~8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/expo-asset/-/expo-asset-8.0.0.tgz#400c7cf8693711ddc87da02d20a7d47bd517afeb"
+expo-asset@~8.1.3:
+  version "8.1.4"
+  resolved "https://registry.yarnpkg.com/expo-asset/-/expo-asset-8.1.4.tgz#5265c28c1c279b2f9779269195bec4caf250ba5d"
   dependencies:
     blueimp-md5 "^2.10.0"
+    invariant "^2.2.4"
+    md5-file "^3.2.3"
     path-browserify "^1.0.0"
     url-parse "^1.4.4"
 
-expo-constants@~8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/expo-constants/-/expo-constants-8.0.0.tgz#e2c5a072dacb4263ccfc57dcb4835ca791960d48"
+expo-constants@~9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/expo-constants/-/expo-constants-9.0.0.tgz#35c600079ee91d38fe4f56375caae6e90f122fdd"
+
+expo-error-recovery@~1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/expo-error-recovery/-/expo-error-recovery-1.1.0.tgz#98b9de5400dbfd022d1631739f3bf5e7016565da"
+
+expo-file-system@~8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/expo-file-system/-/expo-file-system-8.1.0.tgz#d6aa66fa32c19982b94d0013f963c5ee972dfd6d"
   dependencies:
-    ua-parser-js "^0.7.19"
+    uuid "^3.4.0"
 
-expo-error-recovery@~1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/expo-error-recovery/-/expo-error-recovery-1.0.0.tgz#2ca9d59fcd16c5c881af877993731056f2d46afe"
-
-expo-file-system@~8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/expo-file-system/-/expo-file-system-8.0.0.tgz#60b90c8a375308dc85922592a77531a8e0cde6f7"
-  dependencies:
-    uuid-js "^0.7.5"
-
-expo-font@~8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/expo-font/-/expo-font-8.0.0.tgz#33afd0b501caf8f0392aea77f08717090eeb8d41"
+expo-font@~8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/expo-font/-/expo-font-8.1.0.tgz#62e6e2a1579a9b239bdeb9e8e5976de22a45fc8a"
   dependencies:
     fontfaceobserver "^2.1.0"
 
-expo-keep-awake@~8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-8.0.0.tgz#f9200a876a5db86e3f0aec8843428a918cdc08d6"
+expo-keep-awake@~8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-8.1.0.tgz#3a1d8aa5a8395d40c7d79e1c93020ae5f848e664"
 
-expo-linear-gradient@~8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/expo-linear-gradient/-/expo-linear-gradient-8.0.0.tgz#972d33e92714d4a4485635683b5bfa357ecec41b"
+expo-linear-gradient@~8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/expo-linear-gradient/-/expo-linear-gradient-8.1.0.tgz#6933765cf1e76ef2928fd8495e779929699ac4c6"
 
-expo-location@~8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/expo-location/-/expo-location-8.0.0.tgz#58dd54e47b12e26f9f2a97ded3cd15f8fa959b85"
+expo-location@~8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/expo-location/-/expo-location-8.1.0.tgz#6a71ad9a8b78d5f016a30a02013c3b28f46d0b1b"
   dependencies:
     invariant "^2.2.4"
 
-expo-permissions@~8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/expo-permissions/-/expo-permissions-8.0.0.tgz#5a45e8451dd7ff37c9e6ce5e2447818372547813"
+expo-permissions@~8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/expo-permissions/-/expo-permissions-8.1.0.tgz#a7f2ee91ba76ce3a467e7b10adaa9ca5201b226f"
 
-expo-sqlite@~8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/expo-sqlite/-/expo-sqlite-8.0.0.tgz#293b45c78d612ab25400c8c579bd7d73f06ccb6f"
+expo-sqlite@~8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/expo-sqlite/-/expo-sqlite-8.1.0.tgz#858eb28e1143db281de8a49c99b4a953a81d0834"
   dependencies:
     "@expo/websql" "^1.0.1"
     "@types/websql" "^0.0.27"
     lodash "^4.17.15"
 
-expo-web-browser@~8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/expo-web-browser/-/expo-web-browser-8.0.0.tgz#8a4451c744c115569a4c810dac8851f219a21c72"
+expo-web-browser@~8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/expo-web-browser/-/expo-web-browser-8.1.0.tgz#1b4ca25e4dd600fac9ad16e32d81be47778c2667"
 
-expo@^36.0.2:
-  version "36.0.2"
-  resolved "https://registry.yarnpkg.com/expo/-/expo-36.0.2.tgz#17e5470c056f8615ebdd6819087af6a1032cf1ad"
+expo@^37.0.5:
+  version "37.0.5"
+  resolved "https://registry.yarnpkg.com/expo/-/expo-37.0.5.tgz#65df7065af38e01bae6eb55d76db67b83126f82a"
   dependencies:
     "@babel/runtime" "^7.1.2"
     "@expo/vector-icons" "^10.0.2"
@@ -3367,23 +3363,22 @@ expo@^36.0.2:
     "@types/invariant" "^2.2.29"
     "@types/lodash.zipobject" "^4.1.4"
     "@types/qs" "^6.5.1"
-    "@types/uuid-js" "^0.7.1"
-    "@unimodules/core" "~5.0.0"
-    "@unimodules/react-native-adapter" "~5.0.0"
-    babel-preset-expo "~8.0.0"
+    "@unimodules/core" "~5.1.0"
+    "@unimodules/react-native-adapter" "~5.2.0"
+    babel-preset-expo "~8.1.0"
+    badgin "^1.1.2"
     cross-spawn "^6.0.5"
-    expo-app-loader-provider "~8.0.0"
-    expo-asset "~8.0.0"
-    expo-constants "~8.0.0"
-    expo-error-recovery "~1.0.0"
-    expo-file-system "~8.0.0"
-    expo-font "~8.0.0"
-    expo-keep-awake "~8.0.0"
-    expo-linear-gradient "~8.0.0"
-    expo-location "~8.0.0"
-    expo-permissions "~8.0.0"
-    expo-sqlite "~8.0.0"
-    expo-web-browser "~8.0.0"
+    expo-asset "~8.1.3"
+    expo-constants "~9.0.0"
+    expo-error-recovery "~1.1.0"
+    expo-file-system "~8.1.0"
+    expo-font "~8.1.0"
+    expo-keep-awake "~8.1.0"
+    expo-linear-gradient "~8.1.0"
+    expo-location "~8.1.0"
+    expo-permissions "~8.1.0"
+    expo-sqlite "~8.1.0"
+    expo-web-browser "~8.1.0"
     fbemitter "^2.1.1"
     invariant "^2.2.2"
     lodash "^4.6.0"
@@ -3392,19 +3387,20 @@ expo@^36.0.2:
     pretty-format "^23.6.0"
     prop-types "^15.6.0"
     qs "^6.5.0"
-    react-native-view-shot "3.0.2"
+    react-native-view-shot "3.1.2"
     serialize-error "^2.1.0"
-    unimodules-barcode-scanner-interface "~5.0.0"
-    unimodules-camera-interface "~5.0.0"
-    unimodules-constants-interface "~5.0.0"
-    unimodules-face-detector-interface "~5.0.0"
-    unimodules-file-system-interface "~5.0.0"
-    unimodules-font-interface "~5.0.0"
-    unimodules-image-loader-interface "~5.0.0"
-    unimodules-permissions-interface "~5.0.0"
-    unimodules-sensors-interface "~5.0.0"
-    unimodules-task-manager-interface "~5.0.0"
-    uuid-js "^0.7.5"
+    unimodules-app-loader "~1.0.0"
+    unimodules-barcode-scanner-interface "~5.1.0"
+    unimodules-camera-interface "~5.1.0"
+    unimodules-constants-interface "~5.1.0"
+    unimodules-face-detector-interface "~5.1.0"
+    unimodules-file-system-interface "~5.1.0"
+    unimodules-font-interface "~5.1.0"
+    unimodules-image-loader-interface "~5.1.0"
+    unimodules-permissions-interface "~5.1.0"
+    unimodules-sensors-interface "~5.1.0"
+    unimodules-task-manager-interface "~5.1.0"
+    uuid "^3.4.0"
 
 extend-shallow@^1.1.2:
   version "1.1.4"
@@ -5972,9 +5968,9 @@ react-native-tab-view@^1.4.1:
   dependencies:
     prop-types "^15.6.1"
 
-react-native-view-shot@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/react-native-view-shot/-/react-native-view-shot-3.0.2.tgz#daccaec5b8038a680b17533ff7e72876e68c7d0d"
+react-native-view-shot@3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-view-shot/-/react-native-view-shot-3.1.2.tgz#8c8e84c67a4bc8b603e697dbbd59dbc9b4f84825"
 
 react-native@^0.55.0:
   version "0.55.0"
@@ -7034,7 +7030,7 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-ua-parser-js@^0.7.18, ua-parser-js@^0.7.19:
+ua-parser-js@^0.7.18:
   version "0.7.20"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.20.tgz#7527178b82f6a62a0f243d1f94fd30e3e3c21098"
 
@@ -7083,45 +7079,49 @@ unicode-property-aliases-ecmascript@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-1.0.5.tgz#a9cc6cc7ce63a0a3023fc99e341b94431d405a57"
 
-unimodules-barcode-scanner-interface@~5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/unimodules-barcode-scanner-interface/-/unimodules-barcode-scanner-interface-5.0.0.tgz#c8965299fb0d4d4c1f323e7c3dd0314eaeeda8c1"
+unimodules-app-loader@~1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/unimodules-app-loader/-/unimodules-app-loader-1.0.1.tgz#4358195cfa4d6026c71c7365362acf047f252bb0"
 
-unimodules-camera-interface@~5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/unimodules-camera-interface/-/unimodules-camera-interface-5.0.0.tgz#980b6ac221deea26badf92ee0baca91c546dc6b1"
+unimodules-barcode-scanner-interface@~5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/unimodules-barcode-scanner-interface/-/unimodules-barcode-scanner-interface-5.1.0.tgz#6d24322b6db556b21eca99a130673c7e07d86559"
 
-unimodules-constants-interface@~5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/unimodules-constants-interface/-/unimodules-constants-interface-5.0.0.tgz#0e224fde9cf809ed7a026672180e3c96dc186f34"
+unimodules-camera-interface@~5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/unimodules-camera-interface/-/unimodules-camera-interface-5.1.0.tgz#ea43a8d05b7b1a9053e6b2281b428a1e80853661"
 
-unimodules-face-detector-interface@~5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/unimodules-face-detector-interface/-/unimodules-face-detector-interface-5.0.0.tgz#4d8d63db954b849387e23b84df833945f21c11cc"
+unimodules-constants-interface@~5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/unimodules-constants-interface/-/unimodules-constants-interface-5.1.0.tgz#916a8203a887b53cdbcd80b63bc6fd56c85ccfd2"
 
-unimodules-file-system-interface@~5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/unimodules-file-system-interface/-/unimodules-file-system-interface-5.0.0.tgz#890cb2c11c55dfccb4abd51cb3b7142bfd15adea"
+unimodules-face-detector-interface@~5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/unimodules-face-detector-interface/-/unimodules-face-detector-interface-5.1.0.tgz#56b4e8c238d8b38f7937f2eb87212d5f87c463f9"
 
-unimodules-font-interface@~5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/unimodules-font-interface/-/unimodules-font-interface-5.0.0.tgz#c9d40f2fe94cc44493f4948d7701def6d2dacd04"
+unimodules-file-system-interface@~5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/unimodules-file-system-interface/-/unimodules-file-system-interface-5.1.0.tgz#adcba6d6dbb58d889175425dedcbb1501f498ab7"
 
-unimodules-image-loader-interface@~5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/unimodules-image-loader-interface/-/unimodules-image-loader-interface-5.0.0.tgz#59d706367b3df0b0078b1ef510397ff91338256f"
+unimodules-font-interface@~5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/unimodules-font-interface/-/unimodules-font-interface-5.1.0.tgz#953c1eb6e1f221f0c7d427d7aba78cce599b4b27"
 
-unimodules-permissions-interface@~5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/unimodules-permissions-interface/-/unimodules-permissions-interface-5.0.0.tgz#567f3506875befa1f35a64654cf40a2ce9ae4036"
+unimodules-image-loader-interface@~5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/unimodules-image-loader-interface/-/unimodules-image-loader-interface-5.1.0.tgz#40eeecb1d9409b51595b559023230ce50485b626"
 
-unimodules-sensors-interface@~5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/unimodules-sensors-interface/-/unimodules-sensors-interface-5.0.0.tgz#42803532a95d9b6f13b4c08846d39a39144b3d7b"
+unimodules-permissions-interface@~5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/unimodules-permissions-interface/-/unimodules-permissions-interface-5.1.0.tgz#146062ee5cde1f00f34ba2692efab5f0c6f55d02"
 
-unimodules-task-manager-interface@~5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/unimodules-task-manager-interface/-/unimodules-task-manager-interface-5.0.0.tgz#a43b573d319dd84ee526d5eb77b540b3ce5d50e0"
+unimodules-sensors-interface@~5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/unimodules-sensors-interface/-/unimodules-sensors-interface-5.1.0.tgz#2d8f5f15a8b00b3f0aab59c3ff474f39735d634f"
+
+unimodules-task-manager-interface@~5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/unimodules-task-manager-interface/-/unimodules-task-manager-interface-5.1.0.tgz#49fe4431464faa576ba3453a1824030debbf8d35"
 
 union-value@^1.0.0:
   version "1.0.0"
@@ -7183,17 +7183,13 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
 
-uuid-js@^0.7.5:
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/uuid-js/-/uuid-js-0.7.5.tgz#6c886d02a53d2d40dcf25d91a170b4a7b25b94d0"
-
 uuid@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
 
-uuid@^3.3.2:
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.3.tgz#4568f0216e78760ee1dbf3a4d2cf53e224112866"
+uuid@^3.3.2, uuid@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
 
 validate-npm-package-license@^3.0.1:
   version "3.0.1"
