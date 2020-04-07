@@ -3353,9 +3353,9 @@ expo-web-browser@~8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/expo-web-browser/-/expo-web-browser-8.1.0.tgz#1b4ca25e4dd600fac9ad16e32d81be47778c2667"
 
-expo@^37.0.5:
-  version "37.0.5"
-  resolved "https://registry.yarnpkg.com/expo/-/expo-37.0.5.tgz#65df7065af38e01bae6eb55d76db67b83126f82a"
+expo@^37.0.6:
+  version "37.0.6"
+  resolved "https://registry.yarnpkg.com/expo/-/expo-37.0.6.tgz#690eb7de549889db04db718e7de6d99e39c4296b"
   dependencies:
     "@babel/runtime" "^7.1.2"
     "@expo/vector-icons" "^10.0.2"
