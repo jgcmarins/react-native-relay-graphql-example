@@ -3369,9 +3369,9 @@ expo-web-browser@~8.2.1:
   dependencies:
     compare-urls "^2.0.0"
 
-expo@^37.0.10:
-  version "37.0.10"
-  resolved "https://registry.yarnpkg.com/expo/-/expo-37.0.10.tgz#2aa3b2286a5ce0e40584298c61d807a347591c59"
+expo@^37.0.11:
+  version "37.0.11"
+  resolved "https://registry.yarnpkg.com/expo/-/expo-37.0.11.tgz#f7e1838941d40ea5ccb6ab01301f103ddee5ffe7"
   dependencies:
     "@babel/runtime" "^7.1.2"
     "@expo/vector-icons" "^10.0.2"
