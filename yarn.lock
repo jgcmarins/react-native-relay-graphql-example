@@ -3455,9 +3455,9 @@ expo-sqlite@~8.2.1:
     "@expo/websql" "^1.0.1"
     lodash "^4.17.15"
 
-expo@^38.0.3:
-  version "38.0.3"
-  resolved "https://registry.yarnpkg.com/expo/-/expo-38.0.3.tgz#7ed781c14866d18e368cdc42bc5c103fb6576e71"
+expo@^38.0.4:
+  version "38.0.4"
+  resolved "https://registry.yarnpkg.com/expo/-/expo-38.0.4.tgz#577814a89e085a52db702e37859706832e63ea42"
   dependencies:
     "@babel/runtime" "^7.1.2"
     "@expo/vector-icons" "^10.0.2"
