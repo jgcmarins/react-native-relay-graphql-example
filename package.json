@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
-    "expo": "^38.0.9",
+    "expo": "^38.0.10",
     "react": "16.13.1",
     "react-native": "^0.63.2",
     "react-native-tab-view": "^1.4.1",
