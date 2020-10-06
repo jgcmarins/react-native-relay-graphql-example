@@ -28,7 +28,7 @@
     "react": "16.13.1",
     "react-native": "^0.63.3",
     "react-native-tab-view": "^1.4.1",
-    "react-navigation": "^4.4.1",
+    "react-navigation": "^4.4.2",
     "react-relay": "^10.0.1"
   }
 }
