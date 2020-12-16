@@ -7369,14 +7369,14 @@ react-refresh@^0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.4.2.tgz#54a277a6caaac2803d88f1d6f13c1dcfbd81e334"
 
-react-relay@^10.1.1:
-  version "10.1.1"
-  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-10.1.1.tgz#93d37b6b234d68a320cb4e8f5f442ec1ed76b4d5"
+react-relay@^10.1.2:
+  version "10.1.2"
+  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-10.1.2.tgz#b7da7f739cebe42d2a708775b03c554eb535afc5"
   dependencies:
     "@babel/runtime" "^7.0.0"
     fbjs "^3.0.0"
     nullthrows "^1.1.1"
-    relay-runtime "10.1.1"
+    relay-runtime "10.1.2"
 
 react-test-renderer@16.13.1:
   version "16.13.1"
@@ -7614,9 +7614,9 @@ relay-runtime@1.5.0:
     babel-runtime "^6.23.0"
     fbjs "^0.8.14"
 
-relay-runtime@10.1.1:
-  version "10.1.1"
-  resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-10.1.1.tgz#bd5e4645f07fa5cdb5a72868414ad205d48ccc72"
+relay-runtime@10.1.2:
+  version "10.1.2"
+  resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-10.1.2.tgz#842577b78f556a52712773a5c328f94bafd71570"
   dependencies:
     "@babel/runtime" "^7.0.0"
     fbjs "^3.0.0"
