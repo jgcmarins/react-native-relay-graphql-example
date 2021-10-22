@@ -5,7 +5,7 @@
   "devDependencies": {
     "babel-plugin-relay": "^1.5.0",
     "babel-preset-react-native": "^4.0.1",
-    "jest-expo": "~42.1.0",
+    "jest-expo": "~43.0.1",
     "react-native-scripts": "2.0.1",
     "react-test-renderer": "17.0.2",
     "relay-compiler": "^1.5.0"
