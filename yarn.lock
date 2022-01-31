@@ -5180,9 +5180,9 @@ fbjs@^0.8.14, fbjs@^0.8.4:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.9"
 
-fbjs@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-3.0.0.tgz#0907067fb3f57a78f45d95f1eacffcacd623c165"
+fbjs@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-3.0.2.tgz#dfae08a85c66a58372993ce2caf30863f569ff94"
   dependencies:
     cross-fetch "^3.0.4"
     fbjs-css-vars "^1.0.0"
@@ -5190,7 +5190,7 @@ fbjs@^3.0.0:
     object-assign "^4.1.0"
     promise "^7.1.1"
     setimmediate "^1.0.5"
-    ua-parser-js "^0.7.18"
+    ua-parser-js "^0.7.30"
 
 fill-range@^4.0.0:
   version "4.0.0"
@@ -7725,15 +7725,15 @@ react-refresh@^0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.4.2.tgz#54a277a6caaac2803d88f1d6f13c1dcfbd81e334"
 
-react-relay@^11.0.2:
-  version "11.0.2"
-  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-11.0.2.tgz#5f77e30e0d592f19c641e5dcc42f5d828bd16da5"
+react-relay@^13.0.2:
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-13.0.2.tgz#70365014b9b8df0e423cbe46cd8155e177f6d421"
   dependencies:
     "@babel/runtime" "^7.0.0"
-    fbjs "^3.0.0"
+    fbjs "^3.0.2"
     invariant "^2.2.4"
     nullthrows "^1.1.1"
-    relay-runtime "11.0.2"
+    relay-runtime "13.0.2"
 
 react-shallow-renderer@^16.13.1:
   version "16.14.1"
@@ -7949,12 +7949,12 @@ relay-runtime@1.5.0:
     babel-runtime "^6.23.0"
     fbjs "^0.8.14"
 
-relay-runtime@11.0.2:
-  version "11.0.2"
-  resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-11.0.2.tgz#c3650477d45665b9628b852b35f203e361ad55e8"
+relay-runtime@13.0.2:
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-13.0.2.tgz#02adb73ddc159c57b92a23c52984bf73fae0d1fc"
   dependencies:
     "@babel/runtime" "^7.0.0"
-    fbjs "^3.0.0"
+    fbjs "^3.0.2"
     invariant "^2.2.4"
 
 remove-trailing-separator@^1.0.1:
@@ -8669,7 +8669,11 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-ua-parser-js@^0.7.18, ua-parser-js@^0.7.9:
+ua-parser-js@^0.7.30:
+  version "0.7.31"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.31.tgz#649a656b191dffab4f21d5e053e27ca17cbff5c6"
+
+ua-parser-js@^0.7.9:
   version "0.7.28"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
 
