@@ -26,7 +26,7 @@
     "babel-preset-react-native-stage-0": "^1.0.1",
     "expo": "^42.0.3",
     "react": "17.0.2",
-    "react-native": "^0.65.1",
+    "react-native": "^0.68.2",
     "react-native-tab-view": "^1.4.1",
     "react-navigation": "^4.4.4",
     "react-relay": "^11.0.2"
