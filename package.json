@@ -8,7 +8,7 @@
     "jest-expo": "~42.1.0",
     "react-native-scripts": "2.0.1",
     "react-test-renderer": "17.0.2",
-    "relay-compiler": "^1.5.0"
+    "relay-compiler": "^14.0.0"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
